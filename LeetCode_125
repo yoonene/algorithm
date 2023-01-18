@@ -1,0 +1,10 @@
+# Valid Palindrome (유효한 팰린드롬)
+# 팰린드롬 : '소주 만 병만 주소'
+# 문제 링크 : https://leetcode.com/problems/valid-palindrome/
+
+import re
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        cleaned_s = re.sub('[^a-z0-9]', '', s.lower())
+        
+        return cleaned_s[::-1] == cleaned_s
